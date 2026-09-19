@@ -2,3 +2,5 @@
 **/secret*
 **/*.pptx
 **/*.js
+
+**/untracked_*
