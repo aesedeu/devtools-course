@@ -1,4 +1,4 @@
-# Лекция 6. Сеть: SSH, порты, HTTP, WebSocket, gRPC
+# Лекция 5. Сеть: SSH, порты, HTTP, WebSocket, gRPC
 
 **Материалы:** [презентация](lecture06-network.pptx) · [семинар](семинар.md)
 
