@@ -33,8 +33,8 @@
 | 2 | [Git: основы и устройство](<lecture02 - Git основы и устройство/README.md>) | Версионирование | — |
 | 3 | [Git: ветвление и воркфлоу](<lecture03 - Git ветвление и воркфлоу/README.md>) | Версионирование | ДЗ-2 |
 | 4 | [Bash-скрипты и отладка сервера](<lecture04 - Bash-скрипты и отладка сервера/README.md>) | Основы среды | — |
-| 5 | [Контейнеризация и виртуализация](<lecture05 - Контейнеризация и виртуализация/README.md>) | Контейнеры | — |
-| 6 | [Сеть: SSH, HTTP, WebSocket, gRPC](<lecture06 - Сеть SSH HTTP WebSocket gRPC/README.md>) | Сеть | — |
+| 5 | [Сеть: SSH, HTTP, WebSocket, gRPC](<lecture05 - Сеть SSH HTTP WebSocket gRPC/README.md>) | Сеть | — |
+| 6 | [Контейнеризация и виртуализация](<lecture06 - Контейнеризация и виртуализация/README.md>) | Контейнеры | — |
 | 7 | [Docker и devcontainers](<lecture07 - Docker и devcontainers/README.md>) | Контейнеры | ДЗ-3 |
 | 8 | [Docker Compose](<lecture08 - Docker Compose/README.md>) | Контейнеры | — |
 | 9 | [Telegram-боты](<lecture09 - Telegram-боты/README.md>) | Приложения | ДЗ-4 |
