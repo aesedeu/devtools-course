@@ -4,3 +4,4 @@
 **/*.js
 
 **/untracked_*
+**/build*.py
