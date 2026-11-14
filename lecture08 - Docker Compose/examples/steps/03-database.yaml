@@ -1,0 +1,26 @@
+name: lecture08-notes
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.json
+    ports:
+      - "127.0.0.1:18082:8000"
+    volumes:
+      - jsondata:/data
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: notes
+      POSTGRES_DB: notes
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  jsondata:
+  pgdata:
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

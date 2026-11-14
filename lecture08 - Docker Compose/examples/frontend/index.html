@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заметки</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Сохранить, чтобы вернуться</p>
+      <h1>Заметки</h1>
+      <p class="intro">Идея, задача или мысль, которую хочется запомнить.</p>
+    </header>
+    <section class="card" aria-labelledby="new-note-title">
+      <h2 id="new-note-title">Новая заметка</h2>
+      <form id="note-form">
+        <label for="note-text">Текст заметки</label>
+        <textarea id="note-text" name="text" rows="4" maxlength="2000" required placeholder="Что нужно сохранить?"></textarea>
+        <div class="form-footer">
+          <span class="hint">До 2000 символов</span>
+          <button id="add-button" type="submit" disabled>Добавить</button>
+        </div>
+      </form>
+    </section>
+    <section class="notes-section" aria-labelledby="notes-title">
+      <div class="section-header">
+        <h2 id="notes-title">Сохранённые <span id="note-count" class="count"></span></h2>
+        <button id="refresh-button" type="button" class="secondary">Обновить</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Загружаем заметки…</p>
+      <p id="empty-message" class="empty" hidden>Пока здесь пусто. Добавьте первую заметку выше.</p>
+      <ul id="notes-list" class="notes-list" aria-label="Список заметок"></ul>
+    </section>
+    <noscript><p>Для просмотра и добавления заметок включите JavaScript в браузере.</p></noscript>
+  </main>
+</body>
+</html>

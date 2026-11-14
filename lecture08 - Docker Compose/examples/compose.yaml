@@ -1,0 +1,59 @@
+name: lecture08-notes
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:${APP_PORT:-18082}:8000"
+    environment:
+      PGHOST: db
+      PGUSER: notes
+      PGDATABASE: notes
+    secrets:
+      - db_password
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: notes
+      POSTGRES_DB: notes
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "notes", "-d", "notes"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-18084}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+  adminer:
+    image: adminer:5
+    profiles: [tools]
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "127.0.0.1:${ADMINER_PORT:-18083}:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  pgdata:
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

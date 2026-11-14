@@ -27,20 +27,20 @@
 Каждая тема — отдельная папка с презентацией, методичкой семинара и описанием.
 Кликните по теме, чтобы открыть её описание.
 
-| # | Тема | Блок | Ведёт к ДЗ |
-|---|------|------|-----------|
-| 1 | [Linux и командная строка](<lecture01 - Linux и командная строка/README.md>) | Основы среды | ДЗ-1 |
-| 2 | [Git: основы и устройство](<lecture02 - Git основы и устройство/README.md>) | Версионирование | — |
-| 3 | [Git: ветвление и воркфлоу](<lecture03 - Git ветвление и воркфлоу/README.md>) | Версионирование | ДЗ-2 |
-| 4 | [Bash-скрипты и отладка сервера](<lecture04 - Bash-скрипты и отладка сервера/README.md>) | Основы среды | — |
-| 5 | [Сеть: SSH, HTTP, WebSocket, gRPC](<lecture05 - Сеть SSH HTTP WebSocket gRPC/README.md>) | Сеть | — |
-| 6 | [Контейнеризация и виртуализация](<lecture06 - Контейнеризация и виртуализация/README.md>) | Контейнеры | — |
-| 7 | [Docker и devcontainers](<lecture07 - Docker и devcontainers/README.md>) | Контейнеры | ДЗ-3 |
-| 8 | [Docker Compose](<lecture08 - Docker Compose/README.md>) | Контейнеры | — |
-| 9 | [Telegram-боты](<lecture09 - Telegram-боты/README.md>) | Приложения | ДЗ-4 |
-| 10 | [SQL и базы данных](<lecture10 - SQL и базы данных/README.md>) | Данные | — |
-| 11 | [FastAPI базовый](<lecture11 - FastAPI базовый/README.md>) | Приложения | — |
-| 12 | [FastAPI продвинутый: ORM, БД, кэш](<lecture12 - FastAPI продвинутый ORM DB cache/README.md>) | Приложения | ДЗ-5 |
+| #   | Тема                                                                                          | Блок            | Ведёт к ДЗ |
+| --- | --------------------------------------------------------------------------------------------- | --------------- | ---------- |
+| 1   | [Linux и командная строка](<lecture01 - Linux и командная строка/README.md>)                  | Основы среды    | ДЗ-1       |
+| 2   | [Git: основы и устройство](<lecture02 - Git основы и устройство/README.md>)                   | Версионирование | —          |
+| 3   | [Git: ветвление и воркфлоу](<lecture03 - Git ветвление и воркфлоу/README.md>)                 | Версионирование | ДЗ-2       |
+| 4   | [Bash-скрипты и отладка сервера](<lecture04 - Bash-скрипты и отладка сервера/README.md>)      | Основы среды    | —          |
+| 5   | [Сеть: SSH, HTTP, WebSocket, gRPC](<lecture05 - Сеть SSH HTTP WebSocket gRPC/README.md>)      | Сеть            | —          |
+| 6   | [Контейнеризация и виртуализация](<lecture06 - Контейнеризация и виртуализация/README.md>)    | Контейнеры      | —          |
+| 7   | [Docker и devcontainers](<lecture07 - Docker и devcontainers/README.md>)                      | Контейнеры      | ДЗ-3       |
+| 8   | [Docker Compose](<lecture08 - Docker Compose/README.md>)                                      | Контейнеры      | —          |
+| 9   | [Telegram-боты](<lecture09 - Telegram-боты/README.md>)                                        | Приложения      | ДЗ-4       |
+| 10  | [SQL и базы данных](<lecture10 - SQL и базы данных/README.md>)                                | Данные          | —          |
+| 11  | [FastAPI базовый](<lecture11 - FastAPI базовый/README.md>)                                    | Приложения      | —          |
+| 12  | [FastAPI продвинутый: ORM, БД, кэш](<lecture12 - FastAPI продвинутый ORM DB cache/README.md>) | Приложения      | ДЗ-5       |
 
 ---
 
