@@ -1,0 +1,8 @@
+*
+!requirements.txt
+!requirements.postgres.txt
+!postgres_app.py
+!Dockerfile
+!postgres/
+!postgres/Dockerfile
+!json_app.py

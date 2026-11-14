@@ -1,0 +1,6 @@
+name: lecture08-notes
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:18082:8000"

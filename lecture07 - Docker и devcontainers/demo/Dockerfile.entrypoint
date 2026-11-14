@@ -1,0 +1,3 @@
+FROM lecture07-notes:v1
+ENTRYPOINT ["python", "-m", "uvicorn"]
+CMD ["app:app", "--host", "0.0.0.0", "--port", "8000"]

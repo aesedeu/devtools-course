@@ -1,0 +1,42 @@
+name: lecture07-stack
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: notes
+      POSTGRES_DB: notes
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U notes -d notes"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
+    ports:
+      - "127.0.0.1:18080:8000"
+    environment:
+      PGHOST: db
+      PGUSER: notes
+      PGDATABASE: notes
+    secrets:
+      - db_password
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  pgdata:
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

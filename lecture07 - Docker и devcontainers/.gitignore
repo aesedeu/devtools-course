@@ -1,0 +1,14 @@
+demo/.venv/
+demo/data/
+demo/bind-data/
+demo/__pycache__/
+demo/.build-*.log
+.verify-*/
+__pycache__/
+
+demo/secrets/
+
+demo/backups/
+demo/restored-data/
+demo/backup.log
+demo/lecture07-json-backup.cron
