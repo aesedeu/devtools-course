@@ -3,5 +3,6 @@
 !requirements.postgres.txt
 !postgres_app.py
 !Dockerfile
-!Dockerfile.json
+!postgres/
+!postgres/Dockerfile
 !json_app.py

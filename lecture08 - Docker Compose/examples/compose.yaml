@@ -1,7 +1,9 @@
 name: lecture08-notes
 services:
   api:
-    build: .
+    build:
+      context: .
+      dockerfile: postgres/Dockerfile
     ports:
       - "127.0.0.1:${APP_PORT:-18082}:8000"
     environment:
@@ -13,7 +15,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    restart: "no"
+    restart: unless-stopped
+    cpus: 0.5
+    mem_limit: 256m
     healthcheck:
       test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/health', timeout=2)"]
       interval: 2s

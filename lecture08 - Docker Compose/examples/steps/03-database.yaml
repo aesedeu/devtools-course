@@ -1,9 +1,7 @@
 name: lecture08-notes
 services:
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile.json
+    build: .
     ports:
       - "127.0.0.1:18082:8000"
     volumes:

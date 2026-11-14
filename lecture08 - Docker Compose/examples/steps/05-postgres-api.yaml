@@ -1,7 +1,9 @@
 name: lecture08-notes
 services:
   api:
-    build: .
+    build:
+      context: .
+      dockerfile: postgres/Dockerfile
     ports:
       - "127.0.0.1:18082:8000"
     environment:

@@ -1,6 +1,6 @@
 # Лекция 7. Docker и devcontainers
 
-**Материалы:** [презентация](lecture07-docker.pdf) · [семинар](семинар.md) · [презентация – Group 2](<Docker – verbosed.md>)
+**Материалы:** [презентация](lecture07-docker.pdf) · [семинар](семинар.md) · [теория – Group 2](<Theory gr2.md>) · [практика – Group 2](<Practise gr2.md>)
 
 ## Зачем
 Docker — практический инструмент упаковки приложений. После темы 6 «магии» уже нет — только команды и best practices.
